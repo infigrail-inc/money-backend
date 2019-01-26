@@ -17,7 +17,7 @@ public class UserController extends AbstractInfigrailController {
 
     @PostMapping("/sign-up")
     public void signUp(@RequestBody ApplicationUser user) {
-        if (user != null) {
+        if (user == null) {
             throw new IllegalArgumentException("User cannot be null");
         }
         
